@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Year Countdown</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #banner {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #countdown {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+    .happy-new-year {
+      font-size: 4rem;
+      font-weight: bold;
+      color: red;
+    }
+    .time-row {
+      margin: 5px 0;
+      font-size: 2rem;
+    }
+    select {
+      font-size: 1rem;
+      width: 300px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="banner">New Year Countdown</div>
+
+  <!-- Country selection (alphabetical, standard offsets only) -->
+  <label for="country">Choose Your Country:</label><br>
+  <select id="country">
+    <!-- Afghanistan to Botswana -->
+    <option value="4.5">Afghanistan</option>
+    <option value="1">Albania</option>
+    <option value="1">Algeria</option>
+    <option value="1">Andorra</option>
+    <option value="1">Angola</option>
+    <option value="-4">Antigua and Barbuda</option>
+    <option value="-3">Argentina</option>
+    <option value="4">Armenia</option>
+    <option value="10">Australia</option>
+    <option value="1">Austria</option>
+    <option value="4">Azerbaijan</option>
+    <option value="-5">Bahamas</option>
+    <option value="3">Bahrain</option>
+    <option value="6">Bangladesh</option>
+    <option value="-4">Barbados</option>
+    <option value="3">Belarus</option>
+    <option value="1">Belgium</option>
+    <option value="-6">Belize</option>
+    <option value="1">Benin</option>
+    <option value="6">Bhutan</option>
+    <option value="-4">Bolivia</option>
+    <option value="1">Bosnia and Herzegovina</option>
+    <option value="2">Botswana</option>
+
+    <!-- Brazil to Côte d'Ivoire -->
+    <option value="-3">Brazil</option>
+    <option value="8">Brunei</option>
+    <option value="2">Bulgaria</option>
+    <option value="0">Burkina Faso</option>
+    <option value="2">Burundi</option>
+    <option value="-1">Cabo Verde</option>
+    <option value="7">Cambodia</option>
+    <option value="1">Cameroon</option>
+    <option value="-5">Canada</option>
+    <option value="1">Central African Republic</option>
+    <option value="1">Chad</option>
+    <option value="-4">Chile</option>
+    <option value="8">China</option>
+    <option value="-5">Colombia</option>
+    <option value="3">Comoros</option>
+    <option value="1">Congo (Republic of the)</option>
+    <option value="-6">Costa Rica</option>
+    <option value="0">Côte d'Ivoire</option>
+
+    <!-- Croatia to Dominican Republic -->
+    <option value="1">Croatia</option>
+    <option value="-5">Cuba</option>
+    <option value="2">Cyprus</option>
+    <option value="1">Czech Republic</option>
+    <option value="1">Democratic Republic of the Congo</option>
+    <option value="1">Denmark</option>
+    <option value="3">Djibouti</option>
+    <option value="-4">Dominica</option>
+    <option value="-4">Dominican Republic</option>
+
+    <!-- Ecuador to Ghana -->
+    <option value="-5">Ecuador</option>
+    <option value="2">Egypt</option>
+    <option value="-6">El Salvador</option>
+    <option value="1">Equatorial Guinea</option>
+    <option value="3">Eritrea</option>
+    <option value="2">Estonia</option>
+    <option value="2">Eswatini</option>
+    <option value="3">Ethiopia</option>
+    <option value="11">Federated States of Micronesia</option>
+    <option value="12">Fiji</option>
+    <option value="2">Finland</option>
+    <option value="1">France</option>
+    <option value="1">Gabon</option>
+    <option value="0">Gambia</option>
+    <option value="4">Georgia</option>
+    <option value="1">Germany</option>
+    <option value="0">Ghana</option>
+
+    <!-- Greece to Honduras -->
+    <option value="2">Greece</option>
+    <option value="-4">Grenada</option>
+    <option value="-6">Guatemala</option>
+    <option value="0">Guinea</option>
+    <option value="0">Guinea-Bissau</option>
+    <option value="-4">Guyana</option>
+    <option value="-5">Haiti</option>
+    <option value="-6">Honduras</option>
+
+    <!-- Hungary to Italy -->
+    <option value="1">Hungary</option>
+    <option value="0">Iceland</option>
+    <option value="5.5">India</option>
+    <option value="7">Indonesia</option>
+    <option value="3.5">Iran</option>
+    <option value="3">Iraq</option>
+    <option value="0">Ireland</option>
+    <option value="2">Israel</option>
+    <option value="1">Italy</option>
+
+    <!-- Jamaica to Liechtenstein -->
+    <option value="-5">Jamaica</option>
+    <option value="9">Japan</option>
+    <option value="2">Jordan</option>
+    <option value="5">Kazakhstan</option>
+    <option value="3">Kenya</option>
+    <option value="12">Kiribati</option>
+    <option value="1">Kosovo</option>
+    <option value="3">Kuwait</option>
+    <option value="6">Kyrgyzstan</option>
+    <option value="7">Laos</option>
+    <option value="2">Latvia</option>
+    <option value="2">Lebanon</option>
+    <option value="2">Lesotho</option>
+    <option value="0">Liberia</option>
+    <option value="2">Libya</option>
+    <option value="1">Liechtenstein</option>
+
+    <!-- Lithuania to Mongolia -->
+    <option value="2">Lithuania</option>
+    <option value="1">Luxembourg</option>
+    <option value="3">Madagascar</option>
+    <option value="2">Malawi</option>
+    <option value="8">Malaysia</option>
+    <option value="5">Maldives</option>
+    <option value="0">Mali</option>
+    <option value="1">Malta</option>
+    <option value="12">Marshall Islands</option>
+    <option value="0">Mauritania</option>
+    <option value="4">Mauritius</option>
+    <option value="-6">Mexico</option>
+    <option value="2">Moldova</option>
+    <option value="1">Monaco</option>
+    <option value="8">Mongolia</option>
+
+    <!-- Montenegro to Paraguay -->
+    <option value="1">Montenegro</option>
+    <option value="0">Morocco</option>
+    <option value="2">Mozambique</option>
+    <option value="6.5">Myanmar</option>
+    <option value="2">Namibia</option>
+    <option value="12">Nauru</option>
+    <option value="5.75">Nepal</option>
+    <option value="1">Netherlands</option>
+    <option value="12">New Zealand</option>
+    <option value="-6">Nicaragua</option>
+    <option value="1">Niger</option>
+    <option value="1">Nigeria</option>
+    <option value="9">North Korea</option>
+    <option value="1">North Macedonia</option>
+    <option value="1">Norway</option>
+    <option value="4">Oman</option>
+    <option value="5">Pakistan</option>
+    <option value="9">Palau</option>
+    <option value="-5">Panama</option>
+    <option value="10">Papua New Guinea</option>
+    <option value="-4">Paraguay</option>
+
+    <!-- Peru to Senegal -->
+    <option value="-5">Peru</option>
+    <option value="8">Philippines</option>
+    <option value="1">Poland</option>
+    <option value="0">Portugal</option>
+    <option value="3">Qatar</option>
+    <option value="2">Romania</option>
+    <option value="3">Russia (Moscow)</option>
+    <option value="2">Rwanda</option>
+    <option value="-4">St Kitts and Nevis</option>
+    <option value="-4">St Lucia</option>
+    <option value="-4">St Vincent and the Grenadines</option>
+    <option value="13">Samoa</option>
+    <option value="1">San Marino</option>
+    <option value="0">Sao Tome and Principe</option>
+    <option value="3">Saudi Arabia</option>
+    <option value="0">Senegal</option>
+
+    <!-- Serbia to Switzerland -->
+    <option value="1">Serbia</option>
+    <option value="4">Seychelles</option>
+    <option value="0">Sierra Leone</option>
+    <option value="8">Singapore</option>
+    <option value="1">Slovakia</option>
+    <option value="1">Slovenia</option>
+    <option value="11">Solomon Islands</option>
+    <option value="3">Somalia</option>
+    <option value="2">South Africa</option>
+    <option value="9">South Korea</option>
+    <option value="2">South Sudan</option>
+    <option value="1">Spain</option>
+    <option value="5.5">Sri Lanka</option>
+    <option value="2">Sudan</option>
+    <option value="-3">Suriname</option>
+    <option value="1">Sweden</option>
+    <option value="1">Switzerland</option>
+
+    <!-- Syria to Zimbabwe -->
+    <option value="2">Syria</option>
+    <option value="5">Tajikistan</option>
+    <option value="3">Tanzania</option>
+    <option value="7">Thailand</option>
+    <option value="9">Timor-Leste</option>
+    <option value="0">Togo</option>
+    <option value="13">Tonga</option>
+    <option value="-4">Trinidad and Tobago</option>
+    <option value="1">Tunisia</option>
+    <option value="3">Turkey</option>
+    <option value="5">Turkmenistan</option>
+    <option value="12">Tuvalu</option>
+    <option value="3">Uganda</option>
+    <option value="2">Ukraine</option>
+    <option value="4">United Arab Emirates</option>
+    <option value="0">United Kingdom</option>
+    <option value="-5">United States</option>
+    <option value="-3">Uruguay</option>
+    <option value="5">Uzbekistan</option>
+    <option value="11">Vanuatu</option>
+    <option value="1">Vatican City (Holy See)</option>
+    <option value="-4">Venezuela</option>
+    <option value="7">Vietnam</option>
+    <option value="3">Yemen</option>
+    <option value="2">Zambia</option>
+    <option value="2">Zimbabwe</option>
+  </select>
+
+  <div id="countdown"></div>
+
+  <script>
+    const countdownEl = document.getElementById('countdown');
+    const countrySelect = document.getElementById('country');
+
+    function updateCountdown() {
+      const offset = parseFloat(countrySelect.value);
+      const now = new Date();
+
+      // Next year's Jan 1 in UTC
+      const nextYear = now.getUTCFullYear() + 1;
+      const newYearUTC = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0)).getTime();
+
+      // Current UTC
+      const nowUTC = now.getTime() + now.getTimezoneOffset() * 60000;
+
+      // Target time for selected offset
+      const targetTime = newYearUTC - offset * 3600000;
+      const diff = targetTime - nowUTC;
+
+      if (diff <= 0) {
+        countdownEl.innerHTML = `<div class="happy-new-year">HAPPY NEW YEAR!</div>`;
+        return;
+      }
+
+      // Hours, minutes, seconds
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      // Display each on a separate row
+      countdownEl.innerHTML = `
+        <div class="time-row">Hours: ${hours}</div>
+        <div class="time-row">Mins: ${minutes}</div>
+        <div class="time-row">Secs: ${seconds}</div>
+      `;
+    }
+
+    // Update every second
+    setInterval(updateCountdown, 1000);
+
+    // Change event + initial
+    countrySelect.addEventListener('change', updateCountdown);
+    updateCountdown();
+  </script>
+</body>
+</html>
